@@ -1,0 +1,89 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html{
+  height: 100%;
+}
+
+body {
+  background: #E9C46A;
+  height: 100%;
+  text-align: center;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+main{
+  max-width: 40em;
+  max-height: 40em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5em;
+  padding: 1.5em;
+  border: 2px solid #2A9D8F;
+  border-radius: 5px;
+  margin: 2em auto;
+}
+
+section{
+  aspect-ratio: 1;
+  background: #2A9D8F;
+  border-radius: 5px;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+section span{
+  display: table-cell;
+  visibility: hidden;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 5rem;
+  color: #264653;
+}
+
+section:hover span{
+  visibility: visible;
+}
+
+.workaround{
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+.reset{
+  background-color: #264653;;
+  border: 1px solid #264653;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+}
+
+.winner{
+  font-size: xx-large;
+  font-weight: 900;
+  color: red;
+}
